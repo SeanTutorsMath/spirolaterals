@@ -1,0 +1,31 @@
+from turtle import *
+
+speed(5)
+pencolor('black')
+
+penup()
+fd(0)
+bk(100)
+pendown()
+
+ht()
+
+dialation = 100
+angle = 150
+
+for i in range(3):
+    fd(1*dialation)
+    rt(angle)
+    fd(1*dialation)
+    rt(angle)
+    fd(2*dialation)
+    rt(angle)
+    fd(3*dialation)
+    rt(angle)
+    fd(5*dialation)
+    rt(angle)
+    fd(8*dialation)
+    rt(angle)
+    fd(13*dialation)
+
+done()
