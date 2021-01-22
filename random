@@ -1,0 +1,43 @@
+from turtle import * #https://docs.python.org/3.3/library/turtle.html?highlight=turtle
+import random
+
+max_length = random.randint(1, 100)
+angle = random.randint(1,179)
+repeat = 20
+
+if angle < 20:
+    dilation = 20
+elif angle < 40:
+    dilation = 10
+elif angle < 80:
+    dilation = 5
+else:
+    dilation = 1
+
+print('\nMax Length: ' + str(max_length))
+print('\nAngle: ' + str(angle))
+print('\nDilation: ' + str(dilation))
+
+setup(width=.75, height=1.0, startx=None, starty=None)
+
+speed(0)
+pencolor('blue')
+
+penup()
+pendown()
+
+ht()
+
+def function_one_rotation():
+    global x
+    for i in range(int(max_length)):
+        fd(x * int(dilation))
+        rt(180 - int(angle))
+        x += 1
+
+for j in range(int(repeat)):
+    x = 1
+    function_one_rotation()
+
+print('\nDONE\n')
+done()
