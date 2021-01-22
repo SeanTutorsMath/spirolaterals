@@ -1,0 +1,54 @@
+max_length = input('\nMax length? ')
+angle = input('\nAngle? ')
+repeat = input('\nRepetition? ')
+dilation = input('\nDialation (>0)? ')
+
+import time
+
+from turtle import * #https://docs.python.org/3.3/library/turtle.html?highlight=turtle
+
+setup(width=.75, height=1.0, startx=None, starty=None)
+
+time.sleep(5)
+
+speed(7)
+pencolor('#1e96d1')
+pensize(8)
+
+ht()
+
+penup()
+rt(180)
+fd(400)
+rt(90)
+fd(300)
+rt(140)
+pendown()
+
+def function_one_rotation():
+    global x
+    for i in range(int(max_length)):
+        triangle_number = x*(x + 1) / 2
+        fd(triangle_number * float(dilation))
+        rt(180 - int(angle))
+        x += 1
+
+for j in range(int(repeat)):
+    x = 1
+    function_one_rotation()
+    
+pencolor('white')
+def function_one_rotation():
+    global x
+    for i in range(int(max_length)):
+        triangle_number = x*(x + 1) / 2
+        fd(triangle_number * float(dilation))
+        rt(180 - int(angle))
+        x += 1
+
+for j in range(int(repeat)):
+    x = 1
+    function_one_rotation()
+
+print('\nDone\n')
+done()
