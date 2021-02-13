@@ -1,4 +1,4 @@
-from turtle import * #https://docs.python.org/3.3/library/turtle.html?highlight=turtle
+from turtle import *
 import random
 
 max_length = random.randint(1, 100)
