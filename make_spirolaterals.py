@@ -1,9 +1,9 @@
 import sys
 
 max_length = sys.argv[1]
-angle = sys.argv[1]
-repeat = sys.argv[2]
-dilation = sys.argv[3]
+angle = sys.argv[2]
+repeat = sys.argv[3]
+dilation = sys.argv[4]
 
 from turtle import * #https://docs.python.org/3.3/library/turtle.html?highlight=turtle
 
